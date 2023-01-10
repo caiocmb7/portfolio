@@ -9,12 +9,11 @@ Nesse projeto, foi-se utilizado 4 algoritmos diferentes de OCR (Optical Characte
 ![Diagrama do Projeto](https://i.imgur.com/sZLTmUC.png)
 
 Tecnologias: 
-        ```
-        Python (Google Colab GPU, Jupyter)
-        OpenCV
-        YOLOv5
-        Algoritmos de OCR (EasyOCR, Pytesseract, KerasOCR)
-        ```
+    - Python (Google Colab GPU, Jupyter)
+    - OpenCV
+    - YOLOv5
+    - Algoritmos de OCR (EasyOCR, Pytesseract, KerasOCR)
+
 
 ### Dificuldades enfrentadas e soluções impostas
 O propósito do projeto em geral se resume a duas etapas:
