@@ -1,12 +1,10 @@
-### Desafio Computação Cognitiva
+### Computação Cognitiva - Reconhecimento Automático de Placas de Carro usando algoritmos de OCR
 
-Para garantir uma maior eficiência no monitoramento de trânsito, os agentes de uma empresa utilizam um sistema automático de detecção e reconhecimento de placas automotivas, porém o sistema utilizado é muito antigo e apresenta inconsistências, logo precisa ser substituído. Como desafio de Computação Cognitiva, sua tarefa é implementar um novo sistema que reconhece os caracteres da placa dos carros.
+Dataset público do Kaggle: https://www.kaggle.com/datasets/andrewmvd/car-plate-detection
 
-Para isso utilize o dataset: https://www.kaggle.com/datasets/andrewmvd/car-plate-detection
+Nesse projeto, foi-se utilizado 4 algoritmos diferentes de OCR (Optical Character Recognition) a fim de realizar uma comparação e identificar qual seria o melhor para o dataset que está sendo utilizado. O diagrama abaixo demonstra o processo desenvolvido para checar a essas comparações e como foi o fluxo de trabalho proposto.
 
-Você pode utilizar um algoritmo/biblioteca de OCR (Optical Character Recognition) para fazer a leitura dos caracteres.
-
-O código deve ser bem documentado e modularizado, e o github do projeto deverá ser enviado.
+![Diagrama do Projeto](https://imgur.com/Iwwj8rq)
 
 ### Como utilizar o código
 
