@@ -4,7 +4,7 @@ Dataset público do Kaggle: https://www.kaggle.com/datasets/andrewmvd/car-plate-
 
 Nesse projeto, foi-se utilizado 4 algoritmos diferentes de OCR (Optical Character Recognition) a fim de realizar uma comparação e identificar qual seria o melhor para o dataset que está sendo utilizado. O diagrama abaixo demonstra o processo desenvolvido para checar a essas comparações e como foi o fluxo de trabalho proposto.
 
-![Diagrama do Projeto](https://imgur.com/Iwwj8rq)
+![Diagrama do Projeto](https://i.imgur.com/Iwwj8rq.png)
 
 ### Como utilizar o código
 
