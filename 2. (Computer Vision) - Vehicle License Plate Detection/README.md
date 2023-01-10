@@ -1,4 +1,5 @@
 ## Computação Cognitiva - Reconhecimento Automático de Placas de Carro usando algoritmos de OCR
+![Apresentação e Processo Principal do Projeto](https://i.imgur.com/8KRkaL3.png)
 
 ### Introdução
 Dataset público do Kaggle: https://www.kaggle.com/datasets/andrewmvd/car-plate-detection
