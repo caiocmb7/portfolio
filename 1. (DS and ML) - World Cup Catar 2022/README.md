@@ -33,12 +33,16 @@ Credits to my team partner Marco Carujo for creating the [Dataset](https://www.k
 - Feature engineering for data manipulation (data transformation)
 
 - Perform data analysis (EDA)
-    1. SQL
-    2. Pandas/Seaborn/Matplotlib/yellowbricks/etc
+    1. Pandas/Seaborn/Matplotlib/yellowbricks
+    2. SweetViz
     3. pivottablejs
 
 - Create a general statistics based on previously data analysis and feature engineering
     - Generated dataframes contained event_list statistics, global statistics, top scores, top assists, top participations, etc;
+
+- Data Preprocessing
+    1. LabelEncoder
+    2. Log Transformation for Gaussian Distribution
 
 - Perform data clustering using k-means and DBScan
 
@@ -94,9 +98,10 @@ Credits to my team partner Marco Carujo for creating the [Dataset](https://www.k
         ("possesion_home" vs "prediction_team_home_win")
 
 * Clustering by team statistics
+    Using 'GridSearch' for DBScan and K-means using metrics: silhouette_score, davies_bouldin_score, calinski_harabasz_score
     - K-means
     - DBScan
-        - GridSearch for DBScan using metrics: silhouette_score, davies_bouldin_score, calinski_harabasz_score
+    In comparison, K-means had a better performance instead of DBScan.
 
 * Build ML Algorithms using k-fold and gridsearch to predict home team winning, drawing or away team winning
     - LabelEncoder
