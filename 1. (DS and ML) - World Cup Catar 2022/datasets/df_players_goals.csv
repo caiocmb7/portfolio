@@ -1,0 +1,173 @@
+event_id,match_id,team,event_team,event_time,event_type,action_player_1,action_player_2
+1,1.0,Argentina,home, 23' ,Penalty, Lionel Messi , Penalty 
+2,1.0,Argentina,home, 36' ,Goal, Ángel Di María , Alexis Mac Allister 
+10,1.0,France,away, 80' ,Penalty, Kylian Mbappé , Penalty 
+11,1.0,France,away, 81' ,Goal, Kylian Mbappé , Marcus Thuram 
+19,1.0,Argentina,home, 108' ,Goal, Lionel Messi ,
+24,1.0,France,away, 118' ,Penalty, Kylian Mbappé , Penalty 
+36,2.0,Croatia,home, 7' ,Goal, Joško Gvardiol , Ivan Perišić 
+37,2.0,Morocco,away, 9' ,Goal, Achraf Dari ,
+38,2.0,Croatia,home, 42' ,Goal, Mislav Oršić , Marko Livaja 
+50,3.0,France,home, 5' ,Goal, Theo Hernandez ,
+59,3.0,France,home, 79' ,Goal, Randal Kolo Muani ,
+62,4.0,Argentina,home, 34' ,Penalty, Lionel Messi , Penalty 
+63,4.0,Argentina,home, 39' ,Goal, Julián Álvarez ,
+69,4.0,Argentina,home, 69' ,Goal, Julián Álvarez , Lionel Messi 
+77,5.0,France,away, 17' ,Goal, Aurélien Tchouaméni , Antoine Griezmann 
+80,5.0,England,home, 54' ,Penalty, Harry Kane , Penalty 
+81,5.0,France,away, 78' ,Goal, Olivier Giroud , Antoine Griezmann 
+90,6.0,Morocco,home, 42' ,Goal, Youssef En-Nesyri , Yahia Attiyat Allah 
+105,7.0,Argentina,away, 35' ,Goal, Nahuel Molina , Lionel Messi 
+114,7.0,Argentina,away, 73' ,Penalty, Lionel Messi , Penalty 
+121,7.0,Netherlands,home, 83' ,Goal, Wout Weghorst , Steven Berghuis 
+125,7.0,Netherlands,home, 101' ,Goal, Wout Weghorst , Teun Koopmeiners 
+155,8.0,Brazil,away, 106' ,Goal, Neymar , Lucas Paquetá 
+161,8.0,Croatia,home, 117' ,Goal, Bruno Petković , Mislav Oršić 
+171,9.0,Portugal,home, 17' ,Goal, Gonçalo Ramos , João Félix 
+172,9.0,Portugal,home, 33' ,Goal, Pepe , Bruno Fernandes 
+175,9.0,Portugal,home, 51' ,Goal, Gonçalo Ramos ,
+178,9.0,Portugal,home, 55' ,Goal, Raphaël Guerreiro , Gonçalo Ramos 
+179,9.0,Switzerland,away, 58' ,Goal, Manuel Akanji ,
+182,9.0,Portugal,home, 67' ,Goal, Gonçalo Ramos , João Félix 
+189,9.0,Portugal,home, 92' ,Goal, Rafael Leão , Raphaël Guerreiro 
+211,11.0,Brazil,home, 7' ,Goal, Vinícius Júnior , Neymar 
+212,11.0,Brazil,home, 13' ,Penalty, Neymar , Penalty 
+213,11.0,Brazil,home, 29' ,Goal, Richarlison , Thiago Silva 
+214,11.0,Brazil,home, 36' ,Goal, Lucas Paquetá , Vinícius Júnior 
+223,11.0,South Korea,away, 76' ,Goal, Paik Seung-ho ,
+227,12.0,Japan,home, 43' ,Goal, Daizen Maeda , Maya Yoshida 
+228,12.0,Croatia,away, 55' ,Goal, Ivan Perišić , Dejan Lovren 
+250,13.0,England,home, 39' ,Goal, Jordan Henderson , Jude Bellingham 
+251,13.0,England,home, 48' ,Goal, Harry Kane , Phil Foden 
+255,13.0,England,home, 57' ,Goal, Bukayo Saka , Phil Foden 
+265,14.0,France,home, 44' ,Goal, Olivier Giroud , Kylian Mbappé 
+271,14.0,France,home, 74' ,Goal, Kylian Mbappé , Ousmane Dembélé 
+277,14.0,France,home, 91' ,Goal, Kylian Mbappé , Marcus Thuram 
+279,14.0,Poland,away, 99' ,Penalty, Robert Lewandowski , Penalty 
+281,15.0,Argentina,home, 35' ,Goal, Lionel Messi , Nicolás Otamendi 
+284,15.0,Argentina,home, 57' ,Goal, Julián Álvarez ,
+292,15.0,Australia,away, 77' ,Own goal, Enzo Fernández , Own goal 
+295,16.0,Netherlands,home, 10' ,Goal, Memphis , Denzel Dumfries 
+296,16.0,Netherlands,home, 46' ,Goal, Daley Blind , Denzel Dumfries 
+304,16.0,USA,away, 76' ,Goal, Haji Wright , Christian Pulisic 
+305,16.0,Netherlands,home, 81' ,Goal, Denzel Dumfries , Daley Blind 
+312,17.0,Switzerland,away, 20' ,Goal, Xherdan Shaqiri , Djibril Sow 
+313,17.0,Serbia,home, 26' ,Goal, Aleksandar Mitrović , Dušan Tadić 
+315,17.0,Serbia,home, 35' ,Goal, Dušan Vlahović ,
+316,17.0,Switzerland,away, 44' ,Goal, Breel Embolo , Silvan Widmer 
+318,17.0,Switzerland,away, 48' ,Goal, Remo Freuler , Ruben Vargas 
+350,18.0,Cameroon,home, 92' ,Goal, Vincent Aboubakar , Jerome Ngom Mbekeli 
+354,19.0,Uruguay,away, 26' ,Goal, Giorgian de Arrascaeta ,
+355,19.0,Uruguay,away, 32' ,Goal, Giorgian de Arrascaeta , Luis Suárez 
+372,20.0,Portugal,away, 5' ,Goal, Ricardo Horta , Diogo Dalot 
+373,20.0,South Korea,home, 27' ,Goal, Kim Young-gwon ,
+383,20.0,South Korea,home, 91' ,Goal, Hwang Hee-chan , Son Heung-min 
+386,21.0,Spain,away, 11' ,Goal, Álvaro Morata , César Azpilicueta 
+393,21.0,Japan,home, 48' ,Goal, Ritsu Dōan , Junya Ito 
+394,21.0,Japan,home, 51' ,Goal, Ao Tanaka , Kaoru Mitoma 
+402,22.0,Germany,away, 10' ,Goal, Serge Gnabry , David Raum 
+406,22.0,Costa Rica,home, 58' ,Goal, Yeltsin Tejeda ,
+409,22.0,Costa Rica,home, 70' ,Goal, Juan Pablo Vargas ,
+410,22.0,Germany,away, 73' ,Goal, Kai Havertz , Niclas Füllkrug 
+414,22.0,Germany,away, 85' ,Goal, Kai Havertz , Serge Gnabry 
+415,22.0,Germany,away, 89' ,Goal, Niclas Füllkrug , Leroy Sané 
+428,24.0,Morocco,away, 4' ,Goal, Hakim Ziyech ,
+430,24.0,Morocco,away, 23' ,Goal, Youssef En-Nesyri , Achraf Hakimi 
+432,24.0,Canada,home, 40' ,Own goal, Nayef Aguerd , Own goal 
+451,25.0,Mexico,away, 47' ,Goal, Henry Martín , César Montes 
+452,25.0,Mexico,away, 52' ,Goal, Luis Chávez ,
+462,25.0,Saudi Arabia,home, 95' ,Goal, Salem Al-Dawsari , Hattan Bahebri 
+467,26.0,Argentina,away, 46' ,Goal, Alexis Mac Allister , Nahuel Molina 
+472,26.0,Argentina,away, 67' ,Goal, Julián Álvarez , Enzo Fernández 
+480,27.0,Tunisia,home, 58' ,Goal, Wahbi Khazri , Aïssa Laïdouni 
+496,28.0,Australia,home, 60' ,Goal, Mathew Leckie , Riley McGree 
+503,29.0,USA,away, 38' ,Goal, Christian Pulisic , Sergiño Dest 
+521,30.0,England,away, 50' ,Goal, Marcus Rashford ,
+522,30.0,England,away, 51' ,Goal, Phil Foden , Harry Kane 
+529,30.0,England,away, 68' ,Goal, Marcus Rashford , Kalvin Phillips 
+533,31.0,Netherlands,home, 26' ,Goal, Cody Gakpo , Davy Klaassen 
+534,31.0,Netherlands,home, 49' ,Goal, Frenkie de Jong ,
+547,32.0,Senegal,away, 44' ,Penalty, Ismaïla Sarr , Penalty 
+552,32.0,Ecuador,home, 67' ,Goal, Moisés Caicedo , Félix Torres 
+553,32.0,Senegal,away, 70' ,Goal, Kalidou Koulibaly ,
+562,33.0,Portugal,home, 54' ,Goal, Bruno Fernandes , Raphaël Guerreiro 
+574,33.0,Portugal,home, 93' ,Penalty, Bruno Fernandes , Penalty 
+586,34.0,Brazil,home, 83' ,Goal, Casemiro , Rodrygo 
+590,35.0,Ghana,away, 24' ,Goal, Mohammed Salisu ,
+592,35.0,Ghana,away, 34' ,Goal, Mohammed Kudus , Jordan Ayew 
+595,35.0,South Korea,home, 58' ,Goal, Cho Gue-sung , Lee Kang-in 
+596,35.0,South Korea,home, 61' ,Goal, Cho Gue-sung , Kim Jin-su 
+597,35.0,Ghana,away, 68' ,Goal, Mohammed Kudus , Iñaki Williams 
+608,36.0,Cameroon,home, 29' ,Goal, Jean-Charles Castelletto ,
+610,36.0,Serbia,away, 46' ,Goal, Strahinja Pavlović , Dušan Tadić 
+611,36.0,Serbia,away, 48' ,Goal, Sergej Milinković-Savić , Andrija Živković 
+613,36.0,Serbia,away, 53' ,Goal, Aleksandar Mitrović , Andrija Živković 
+616,36.0,Cameroon,home, 63' ,Goal, Vincent Aboubakar , Jean-Charles Castelletto 
+617,36.0,Cameroon,home, 66' ,Goal, Eric Maxim Choupo-Moting , Vincent Aboubakar 
+633,37.0,Spain,home, 62' ,Goal, Álvaro Morata , Jordi Alba 
+640,37.0,Germany,away, 83' ,Goal, Niclas Füllkrug , Jamal Musiala 
+643,38.0,Canada,away, 2' ,Goal, Alphonso Davies , Tajon Buchanan 
+644,38.0,Croatia,home, 36' ,Goal, Andrej Kramarić , Ivan Perišić 
+645,38.0,Croatia,home, 44' ,Goal, Marko Livaja , Josip Juranović 
+652,38.0,Croatia,home, 70' ,Goal, Andrej Kramarić , Ivan Perišić 
+661,38.0,Croatia,home, 94' ,Goal, Lovro Majer , Mislav Oršić 
+668,39.0,Morocco,away, 73' ,Goal, Romain Saïss , Abdelhamid Sabiri 
+675,39.0,Morocco,away, 92' ,Goal, Zakaria Aboukhlal , Hakim Ziyech 
+687,40.0,Costa Rica,away, 81' ,Goal, Keysher Fuller , Yeltsin Tejeda 
+700,41.0,Argentina,home, 64' ,Goal, Lionel Messi , Ángel Di María 
+707,41.0,Argentina,home, 87' ,Goal, Enzo Fernández , Lionel Messi 
+713,42.0,France,home, 61' ,Goal, Kylian Mbappé , Theo Hernandez 
+715,42.0,Denmark,away, 68' ,Goal, Andreas Christensen , Joachim Andersen 
+720,42.0,France,home, 86' ,Goal, Kylian Mbappé , Antoine Griezmann 
+727,43.0,Poland,home, 39' ,Goal, Piotr Zieliński , Robert Lewandowski 
+734,43.0,Poland,home, 82' ,Goal, Robert Lewandowski ,
+738,44.0,Australia,away, 23' ,Goal, Mitchell Duke ,
+758,46.0,Netherlands,home, 6' ,Goal, Cody Gakpo , Davy Klaassen 
+760,46.0,Ecuador,away, 49' ,Goal, Enner Valencia ,
+770,47.0,Senegal,away, 41' ,Goal, Boulaye Dia ,
+772,47.0,Senegal,away, 48' ,Goal, Famara Diédhiou , Ismail Jakobs 
+781,47.0,Qatar,home, 78' ,Goal, Mohammed Muntari , Ismail Mohammad 
+784,47.0,Senegal,away, 84' ,Goal, Bamba Dieng , Iliman Ndiaye 
+801,48.0,Iran,away, 98' ,Goal, Roozbeh Cheshmi ,
+802,48.0,Iran,away, 101' ,Goal, Ramin Rezaeian , Mehdi Taremi 
+807,49.0,Brazil,home, 62' ,Goal, Richarlison ,
+811,49.0,Brazil,home, 73' ,Goal, Richarlison , Vinícius Júnior 
+822,50.0,Portugal,home, 65' ,Penalty, Cristiano Ronaldo , Penalty 
+824,50.0,Ghana,away, 73' ,Goal, André Ayew ,
+828,50.0,Portugal,home, 78' ,Goal, João Félix , Bruno Fernandes 
+829,50.0,Portugal,home, 80' ,Goal, Rafael Leão , Bruno Fernandes 
+833,50.0,Ghana,away, 89' ,Goal, Osman Bukari ,
+849,52.0,Switzerland,home, 48' ,Goal, Breel Embolo , Xherdan Shaqiri 
+863,53.0,Belgium,home, 44' ,Goal, Michy Batshuayi , Toby Alderweireld 
+877,54.0,Spain,home, 11' ,Goal, Dani Olmo ,
+878,54.0,Spain,home, 21' ,Goal, Marco Asensio , Jordi Alba 
+879,54.0,Spain,home, 31' ,Penalty, Ferran Torres , Penalty 
+881,54.0,Spain,home, 54' ,Goal, Ferran Torres ,
+891,54.0,Spain,home, 74' ,Goal, Gavi , Álvaro Morata 
+893,54.0,Spain,home, 90' ,Goal, Carlos Soler ,
+894,54.0,Spain,home, 92' ,Goal, Álvaro Morata , Dani Olmo 
+896,55.0,Germany,home, 33' ,Penalty, Ilkay Gündoğan , Penalty 
+905,55.0,Japan,away, 75' ,Goal, Ritsu Dōan ,
+908,55.0,Japan,away, 83' ,Goal, Takuma Asano , Ko Itakura 
+919,57.0,Australia,away, 9' ,Goal, Craig Goodwin , Mathew Leckie 
+921,57.0,France,home, 27' ,Goal, Adrien Rabiot , Theo Hernandez 
+922,57.0,France,home, 32' ,Goal, Olivier Giroud , Adrien Rabiot 
+925,57.0,France,home, 68' ,Goal, Kylian Mbappé , Ousmane Dembélé 
+926,57.0,France,home, 71' ,Goal, Olivier Giroud , Kylian Mbappé 
+959,60.0,Argentina,home, 10' ,Penalty, Lionel Messi , Penalty 
+962,60.0,Saudi Arabia,away, 48' ,Goal, Saleh Al-Shehri , Firas Al-Buraikan 
+963,60.0,Saudi Arabia,away, 53' ,Goal, Salem Al-Dawsari ,
+980,61.0,USA,home, 36' ,Goal, Tim Weah , Christian Pulisic 
+990,61.0,Wales,away, 82' ,Penalty, Gareth Bale , Penalty 
+1003,62.0,Netherlands,away, 84' ,Goal, Cody Gakpo , Frenkie de Jong 
+1007,62.0,Netherlands,away, 99' ,Goal, Davy Klaassen ,
+1010,63.0,England,home, 35' ,Goal, Jude Bellingham , Luke Shaw 
+1011,63.0,England,home, 43' ,Goal, Bukayo Saka , Harry Maguire 
+1012,63.0,England,home, 46' ,Goal, Raheem Sterling , Harry Kane 
+1017,63.0,England,home, 62' ,Goal, Bukayo Saka , Raheem Sterling 
+1019,63.0,Iran,away, 65' ,Goal, Mehdi Taremi , Ali Gholizadeh 
+1024,63.0,England,home, 71' ,Goal, Marcus Rashford , Harry Kane 
+1027,63.0,England,home, 90' ,Goal, Jack Grealish , Callum Wilson 
+1028,63.0,Iran,away, 103' ,Penalty, Mehdi Taremi , Penalty 
+1031,64.0,Ecuador,away, 16' ,Penalty, Enner Valencia , Penalty 
+1034,64.0,Ecuador,away, 31' ,Goal, Enner Valencia , Ángelo Preciado 
