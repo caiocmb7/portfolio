@@ -28,7 +28,7 @@ However, only the new car plate cropping approach was not visually sufficient fo
 
 ### How to use the code:
 
-The code was built in Jupyter Lab, so we need to use it for some things in the code to work, such as creating directories, etc.
+The code was built in Jupyter Lab, so we need to use it for some things in the code to work, such as creating directories, pytesseract configuration, etc.
 
 This created class contains two proposed solutions:
 
@@ -39,7 +39,7 @@ This created class contains two proposed solutions:
 
     *Remember that in these methods, you need the dataset with the original images, from the kaggle dataset provided.
 
-    -> Car().OpenCVeasy(path = "dataset/images/", folder_name = "detection_classic", show_steps = False)
+    -> Car().OpenCVeasy(path = "samples/", folder_name = "results", show_steps = False)
 
     where
 
@@ -54,11 +54,11 @@ This created class contains two proposed solutions:
 
     *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this.
 
-    -> Car().YOLOeasy(path = "samples/", folder_name = "yolo_easy_detection")
+    -> Car().YOLOeasy(path = "samples/", folder_name = "results")
 
-    -> Car().YOLOpytesseract(path = "samples/", folder_name = "pytesseract_detection")  
+    -> Car().YOLOpytesseract(path = "samples/", folder_name = "results")  
 
-    -> Car().YOLOkeras(path = "samples/", folder_name = "keras_detection") 
+    -> Car().YOLOkeras(path = "samples/", folder_name = "results") 
 
     where
 
