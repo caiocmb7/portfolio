@@ -1,71 +1,72 @@
-## Computação Cognitiva - Reconhecimento Automático de Placas de Carro usando algoritmos de OCR
-![Apresentação e Processo Principal do Projeto](https://i.imgur.com/8KRkaL3.png)
+## Cognitive Computing - Automatic License Plate Recognition using OCR algorithms
+![Project Workflow](https://i.imgur.com/8KRkaL3.png)
 
-### Introdução
-Dataset público do Kaggle: https://www.kaggle.com/datasets/andrewmvd/car-plate-detection
+### Introduction
+Public Kaggle Dataset: https://www.kaggle.com/datasets/andrewmvd/car-plate-detection
 
-Nesse projeto, foi-se utilizado 4 algoritmos diferentes de OCR (Optical Character Recognition) a fim de realizar uma comparação e identificar qual seria o melhor para o dataset que está sendo utilizado. O diagrama abaixo demonstra o processo desenvolvido para checar a essas comparações e como foi o fluxo de trabalho proposto.
+In this project, four different OCR (Optical Character Recognition) algorithms were used to compare and identify the best one for the dataset being used. The diagram below demonstrates the developed process to perform these comparisons and how the proposed workflow was implemented.
 
-![Diagrama do Projeto](https://i.imgur.com/sZLTmUC.png)
+![Project's Diagram](https://i.imgur.com/sZLTmUC.png)
 
-Tecnologias: 
+Technologies: 
 
-    - Python (Google Colab GPU, Jupyter)
+    - Python (Jupyter Lab)
     - OpenCV
     - YOLOv5
-    - Algoritmos de OCR (EasyOCR, Pytesseract, KerasOCR)
+    - OCR Algorithms (EasyOCR, Pytesseract, KerasOCR)
 
 
-### Dificuldades enfrentadas e soluções impostas
-O fluxo do projeto em geral se resume em dois escopos:
-1. Receber o dataset de imagens de carros e utilizar detecção de borda com OCR para rotular o texto de cada placa de carro em um .csv
-2. Receber o dataset de imagens de carros e analisar a placa de cada uma, realizando um recorte no local correto utilizando a arquitetura YOLOv5 e, após isso, transcrever essa imagem para texto, salvando a composição rótulo do carro | placa do carro em .csv utilizando técnicas diferentes de OCR.
+### Challenges faced and solutions imposed
+The project flow can be summarized into two scopes:
 
-Desse forma, o projeto seria composto apenas pelo conjunto -> detecção de bordas + EasyOCR. Porém, a medida que se foi realizando o projeto, percebeu-se erros tanto na parte do recorte das placas de carro, como no algoritmo de OCR. Nesse sentido, tentou-se uma nova abordagem para fazer esse recorte de uma forma mais automatizada e correta. Para isso, foi-se utilizada o yolov5 para fazer um recorte mais correto dessas placas de carros, como também outras técnicas de OCR a fim de melhorar os resultados.
+1. Receiving the dataset of car images and using edge detection with OCR to label the text of each car plate in a .csv file.
+2. Receiving the dataset of car images and analyzing the plate of each one, performing a crop on the correct location using the YOLOv5 architecture and, after that, transcribing that image to text, saving the composition label of the car | car plate in .csv using different OCR techniques.
 
-Porém, apenas a nova abordagem de recorte das placas de carro não foram suficientes visualmente para a eficácia e excelência das métricas e valores supostos. Dito isso, foi-se adicionado mais duas técnicas de OCR que foram pytesseract e KerasOCR, em que ambas se mostraram bem melhores do que o EasyOCR. Dentre elas duas, KerasOCR é um algoritmo bem mais minucioso, onde ele consegue analisar mínimos detalhes, o que pode ser bom de uma certa perspectiva e ruim para outra, pois detecta caracteres que em teoria não são relevantes para a análise da placa, como também entende melhor o espaçamento entre palavras da placa de carro, fazendo com que a transcrição da imagem para o texto tenha que passar por uma manipulação para salvar em csv. Já o Pytesseract, apesar de não ser tão minucioso em suas detecções, foi o modelo que mais se encaixou e o que mais acertou da forma como queríamos retornar o output para esse projeto, além de ser mais rápido na resposta.
+Therefore, the project would only be composed of the set -> edge detection + EasyOCR. However, as the project progressed, errors were noticed in both the car plate cropping and the OCR algorithm. In this sense, a new approach was tried to make this cropping more automated and correct. For this, YOLOv5 was used to make a more correct crop of these car plates, as well as other OCR techniques to improve the results.
 
-### Como utilizar o código
+However, only the new car plate cropping approach was not visually sufficient for the effectiveness and excellence of the supposed metrics and values. Therefore, two more OCR techniques were added, which were pytesseract and KerasOCR, both of which proved to be much better than EasyOCR. Between the two, KerasOCR is a much more meticulous algorithm, where it can analyze tiny details, which can be good from one perspective and bad from another, as it detects characters that are not theoretically relevant to the analysis of the plate, as well as understanding the spacing between words of the car plate better, causing the image-to-text transcription to go through a manipulation to be saved in CSV. On the other hand, Pytesseract, despite not being so meticulous in its detections, was the model that best fit and had the most accurate output for this project, in addition to being faster in response.
 
-O código foi construído no Jupyter Lab, então precisamos utilizar para que algumas coisas dentro do código deem certo, como a parte da criação dos diretórios, etc.
+### How to use the code:
 
-Essa classe criada contém duas propostas de solução:
+The code was built in Jupyter Lab, so we need to use it for some things in the code to work, such as creating directories, etc.
 
-    1. Abordagem mais clássica, usando detecção de borda (OpenCV) para identificar as placas de carro e depois disso se foi usado easyOCR para a transcrição da imagem para texto.
+This created class contains two proposed solutions:
 
-        Para a utilização dessa solução, basta passar o comando abaixo, rodando a classe que está em [plate_detection.py]
+1. More classical approach, using edge detection (OpenCV) to identify the car plates, and then using EasyOCR for image to text transcription.
 
-        *Lembre-se que nesses métodos, precisa do dataset com as imagens originais, do próprio dataset provido do kaggle.
+    To use this solution, just run the class in [plate_detection.py] with the following command:
 
-        -> Car().OpenCVeasy(path = "dataset/images/", folder_name = "detection_classic", show_steps = False)
+    *Remember that in these methods, you need the dataset with the original images, from the kaggle dataset provided.
 
-        onde 
+    -> Car().OpenCVeasy(path = "dataset/images/", folder_name = "detection_classic", show_steps = False)
 
-            * path = local onde foi colocado o dataset
-            * folder_name = nome da pasta que será criada e alocada os resultados do script
-            * show_steps = bom método para quando está utilizando uma detecção manual, onde pode mostrar o passo a passo do que está ocorrendo com a imagem para ser transcrita.
+    where
 
-    2. A segunda utilizando yolov5, fazendo o treinamento do modelo e utilizando o próprio recurso do yolov5 para fazer o recorte das imagens onde estão as placas das respectivas imagens, cujo método para a realização dessas imagens para imagens recortadas está na pasta helper. Após isso, tem-se três opções para a extração dos caracteres das placas, usando EasyOCR, Pytesseract ou KerasOCR.
+        * path = location where the dataset was placed
+        * folder_name = name of the folder that will be created and where the script results will be allocated
+        * show_steps = good method for when using manual detection, where it can show step-by-step what is happening with the image to be transcribed.
 
-        Para a utilização dessa solução, basta passar o comando abaixo, rodando a classe que está em [plate_detection.py]
+2. The second solution uses YOLOv5, training the model and using YOLOv5's own resource to crop the images where the respective car plates are located. After that, there are three options for extracting the plate characters, using EasyOCR, Pytesseract or KerasOCR.
 
-        *Lembre-se que nesses métodos, precisa do dataset com a imagens recortadas devidamente, utilizando o helper/[yolo_cropped_images.ipynb] para isso.
+    To use this solution, just run the class in [plate_detection.py] with the following commands:
 
-        -> Car().YOLOeasy(path = "samples/", folder_name = "yolo_easy_detection")
-        -> Car().YOLOpytesseract(path = "samples/", folder_name = "pytesseract_detection")  
-        -> Car().YOLOkeras(path = "samples/", folder_name = "keras_detection") 
+    *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this.
 
-        onde 
+    -> Car().YOLOeasy(path = "samples/", folder_name = "yolo_easy_detection")
+    -> Car().YOLOpytesseract(path = "samples/", folder_name = "pytesseract_detection")  
+    -> Car().YOLOkeras(path = "samples/", folder_name = "keras_detection") 
 
-            * path = local onde foi colocado o dataset (nesse caso já é o resultado retornado do crop do yolov5, não o dataset original)
-            * folder_name = nome da pasta que será criada e alocada os resultados do script
+    where
+
+        * path = location where the dataset was placed (in this case, it is already the result returned from the yolov5 crop, not the original dataset)
+        * folder_name = name of the folder that will be created and where the script results will be allocated.
+
 
 ### Next steps
 
-1. Configurar a parte dos resultados do dataset
-2. Realizar pre-processamento para melhorias nas imagens
-3. Verificar a existência de uma configuração melhor para o pytesseract (parâmetro psm, oem, etc)
-4. Adicionar métricas para avaliar o desempenho das OCR
+1. Perform pre-processing for image enhancement
+2. Check for the existence of a better configuration for pytesseract (psm, oem, etc. parameters)
+3. Add metrics to evaluate OCR performance.
 
 
 
