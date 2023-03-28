@@ -17,13 +17,13 @@ Tecnologias:
 
 
 ### Dificuldades enfrentadas e soluções impostas
-O propósito do projeto em geral se resume a duas etapas:
-1. Receber o dataset de imagens de carros e analisar a placa de cada uma, realizando um recorte no local correto;
-2. Receber as placas de cada carro e transcrever essa imagem para texto, salvando a composição rótulo do carro | placa do carro em .csv
+O fluxo do projeto em geral se resume em dois escopos:
+1. Receber o dataset de imagens de carros e utilizar detecção de borda com OCR para rotular o texto de cada placa de carro em um .csv
+2. Receber o dataset de imagens de carros e analisar a placa de cada uma, realizando um recorte no local correto utilizando a arquitetura YOLOv5 e, após isso, transcrever essa imagem para texto, salvando a composição rótulo do carro | placa do carro em .csv utilizando técnicas diferentes de OCR.
 
-Desse forma, o projeto seria composto apenas pelo conjunto -> detecção de bordas + EasyOCR. Porém, a medida que se foi realizando o projeto, percebeu-se erros tanto na parte do recorte das placas de carro, como no algoritmo de OCR. Nesse sentido, tentou-se uma nova abordagem para fazer esse recorte de uma forma mais automatizada e correta. Para isso, foi-se utilizada o yolov5.
+Desse forma, o projeto seria composto apenas pelo conjunto -> detecção de bordas + EasyOCR. Porém, a medida que se foi realizando o projeto, percebeu-se erros tanto na parte do recorte das placas de carro, como no algoritmo de OCR. Nesse sentido, tentou-se uma nova abordagem para fazer esse recorte de uma forma mais automatizada e correta. Para isso, foi-se utilizada o yolov5 para fazer um recorte mais correto dessas placas de carros, como também outras técnicas de OCR a fim de melhorar os resultados.
 
-Porém, apenas a nova abordagem de recorte das placas de carro não foram suficientes visualmente para a eficácia e excelência das métricas e valores supostos. Dito isso, foi-se adicionado mais duas técnicas de OCR que foram pytesseract e KerasOCR, em que ambas se mostraram bem melhores do que o EasyOCR. Dentre elas duas, KerasOCR é um algoritmo bem mais minucioso, onde ele consegue analisar mínimos detalhes, o que pode ser bom de uma certa perspectiva e ruim para outra, pois detecta caracteres que em teoria não são relevantes para a análise da placa, como também entende melhor o espaçamento entre palavras da placa de carro, fazendo com que a transcrição da imagem para o texto tenha que passar por uma manipulação para salvar em csv. Já o Pytesseract, apesar de não ser tão minucioso em suas detecções, foi o modelo que mais se encaixou e o que mais acertou da forma como queríamos retornar o output para esse projeto.
+Porém, apenas a nova abordagem de recorte das placas de carro não foram suficientes visualmente para a eficácia e excelência das métricas e valores supostos. Dito isso, foi-se adicionado mais duas técnicas de OCR que foram pytesseract e KerasOCR, em que ambas se mostraram bem melhores do que o EasyOCR. Dentre elas duas, KerasOCR é um algoritmo bem mais minucioso, onde ele consegue analisar mínimos detalhes, o que pode ser bom de uma certa perspectiva e ruim para outra, pois detecta caracteres que em teoria não são relevantes para a análise da placa, como também entende melhor o espaçamento entre palavras da placa de carro, fazendo com que a transcrição da imagem para o texto tenha que passar por uma manipulação para salvar em csv. Já o Pytesseract, apesar de não ser tão minucioso em suas detecções, foi o modelo que mais se encaixou e o que mais acertou da forma como queríamos retornar o output para esse projeto, além de ser mais rápido na resposta.
 
 ### Como utilizar o código
 
@@ -64,7 +64,7 @@ Essa classe criada contém duas propostas de solução:
 
 1. Configurar a parte dos resultados do dataset
 2. Realizar pre-processamento para melhorias nas imagens
-3. Verificar a existência de uma configuração melhor para o pytesseract (parâmetro)
+3. Verificar a existência de uma configuração melhor para o pytesseract (parâmetro psm, oem, etc)
 4. Adicionar métricas para avaliar o desempenho das OCR
 
 
