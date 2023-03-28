@@ -23,11 +23,11 @@ O propósito do projeto em geral se resume a duas etapas:
 
 Desse forma, o projeto seria composto apenas pelo conjunto -> detecção de bordas + EasyOCR. Porém, a medida que se foi realizando o projeto, percebeu-se erros tanto na parte do recorte das placas de carro, como no algoritmo de OCR. Nesse sentido, tentou-se uma nova abordagem para fazer esse recorte de uma forma mais automatizada e correta. Para isso, foi-se utilizada o yolov5.
 
-Porém, apenas a nova abordagem de recorte das placas de carro não foram suficientes visualmente para a eficácia e excelência das métricas e valores supostos. Dito isso, foi-se adicionado mais duas técnicas de OCR que foram pytesseract e KerasOCR, em que ambas se mostraram bem melhores do que o EasyOCR. Dentre elas duas, KerasOCR é um algoritmo bem mais minucioso, onde ele consegue analisar mínimos detalhes, o que pode ser bom de uma certa perspectiva e ruim para outra, pois detecta caracteres que em teoria não são relevantes para a análise da placa, como também entende melhor o espaçamento entre palavras da placa de carro, fazendo com que a transcrição da imagem para o texto tenha que passar por uma manipulação para salvar em csv. Já o Pytesseract, a depender da configuração dos parâmetros, mostra-se um bom algoritmo e potencialmente melhor do que o KerasOCR, mas, de início, o Keras é superior.
+Porém, apenas a nova abordagem de recorte das placas de carro não foram suficientes visualmente para a eficácia e excelência das métricas e valores supostos. Dito isso, foi-se adicionado mais duas técnicas de OCR que foram pytesseract e KerasOCR, em que ambas se mostraram bem melhores do que o EasyOCR. Dentre elas duas, KerasOCR é um algoritmo bem mais minucioso, onde ele consegue analisar mínimos detalhes, o que pode ser bom de uma certa perspectiva e ruim para outra, pois detecta caracteres que em teoria não são relevantes para a análise da placa, como também entende melhor o espaçamento entre palavras da placa de carro, fazendo com que a transcrição da imagem para o texto tenha que passar por uma manipulação para salvar em csv. Já o Pytesseract, apesar de não ser tão minucioso em suas detecções, foi o modelo que mais se encaixou e o que mais acertou da forma como queríamos retornar o output para esse projeto.
 
 ### Como utilizar o código
 
-O código foi construído no Google Colab, então precisamos utilizar para que algumas coisas dentro do código deem certo, como a parte da criação dos diretórios, etc.
+O código foi construído no Jupyter Lab, então precisamos utilizar para que algumas coisas dentro do código deem certo, como a parte da criação dos diretórios, etc.
 
 Essa classe criada contém duas propostas de solução:
 
@@ -37,7 +37,7 @@ Essa classe criada contém duas propostas de solução:
 
         *Lembre-se que nesses métodos, precisa do dataset com as imagens originais, do próprio dataset provido do kaggle.
 
-        -> Car().OpenCVeasy(path = "/content/dataset/images", folder_name = "detection_classic", show_steps = False)
+        -> Car().OpenCVeasy(path = "dataset/images/", folder_name = "detection_classic", show_steps = False)
 
         onde 
 
@@ -51,9 +51,9 @@ Essa classe criada contém duas propostas de solução:
 
         *Lembre-se que nesses métodos, precisa do dataset com a imagens recortadas devidamente, utilizando o helper/[yolo_cropped_images.ipynb] para isso.
 
-        -> Car().YOLOeasy(path = "/content/samples", folder_name = "yolo_easy_detection")
-        -> Car().YOLOpytesseract(path = "/content/samples", folder_name = "pytesseract_detection")  
-        -> Car().YOLOkeras(path = "/content/samples", folder_name = "keras_detection") 
+        -> Car().YOLOeasy(path = "samples/", folder_name = "yolo_easy_detection")
+        -> Car().YOLOpytesseract(path = "samples/", folder_name = "pytesseract_detection")  
+        -> Car().YOLOkeras(path = "samples/", folder_name = "keras_detection") 
 
         onde 
 
