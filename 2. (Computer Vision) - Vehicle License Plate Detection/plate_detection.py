@@ -120,7 +120,7 @@ class Car:
             img = cv2.resize(img, (widht * 4, height * 4))
         return img
 
-    def OpenCVeasy(self, path, folder_name, show_steps=False):
+    def OpenCVeasy(self, path, folder_name, save_fig=False, show_steps=False):
         """
         Use threshold, edge detection to find countours for car plate detection. EasyOCR for image to text recognition.
 
@@ -139,9 +139,9 @@ class Car:
         full_path = self.__create_new_folder(path, folder_name)
 
         for dir, subarch, archives in os.walk(path):
-            for path_imagem in archives:
+            for path_image in archives:
                 try:
-                    img = cv2.imread(path + "/" + str(path_imagem))
+                    img = cv2.imread(path + "/" + str(path_image))
                     img = self.__resize_images(img)
                     gray, bfilter, edged = self.__filters(img)
                     new_image, approx, cropped_image = self.__search_plate_and_crop(
@@ -152,7 +152,7 @@ class Car:
                     result = reader.readtext(cropped_image)
 
                     text = result[0][-2]
-                    df_lista.append((path_imagem, text.upper()))
+                    df_lista.append((path_image, text.upper()))
                     font = cv2.FONT_HERSHEY_SIMPLEX
                     res = cv2.putText(
                         img,
@@ -167,23 +167,24 @@ class Car:
                     res = cv2.rectangle(
                         img, tuple(approx[0][0]), tuple(approx[2][0]), (0, 255, 0), 3
                     )
-                    plt.imshow(cv2.cvtColor(res, cv2.COLOR_BGR2RGB))
-                    plt.savefig(full_path + "/" + path_imagem)
+                    #plt.imshow(cv2.cvtColor(res, cv2.COLOR_BGR2RGB))
+                    if save_fig == True:   
+                        plt.savefig(full_path + "/" + path_image)
                 except IndexError as IE:
                     print(
-                        f"\n\nOcorreu um erro de Index na imagem: {path_imagem}, porém continuando para a proxima imagem"
+                        f"\n\nIndex Error in {path_image}"
                     )
                     continue
                 except Exception as error:
                     print(
-                        f"\n\nOcorreu um erro na imagem: {path_imagem}, porém continuando para a proxima imagem"
+                        f"\n\nImage Error {path_image}"
                     )
                     continue
 
         df_aux = pd.DataFrame(df_lista)
         df_aux.rename(columns={0: "Image", 1: "Plate"}, inplace=True)
         df = df_aux.sort_values("Image").to_csv(
-            full_path + "/" + "results.csv", index=False
+            full_path + "/" + "opencv_results.csv", index=False
         )
 
         if show_steps == True:
@@ -214,24 +215,24 @@ class Car:
         full_path = self.__create_new_folder(path, folder_name)
 
         for dir, subarch, archives in os.walk(path):
-            for path_imagem in archives:
+            for path_image in archives:
                 try:
-                    img = cv2.imread(path + "/" + str(path_imagem))
+                    img = cv2.imread(path + "/" + str(path_image))
                     img = self.__resize_images(img)
                     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                     reader = easyocr.Reader(["en"])
                     result = reader.readtext(img)
                     text = result[0][-2]
-                    df_lista_yolo.append((path_imagem, text.upper()))
+                    df_lista_yolo.append((path_image, text.upper()))
 
                 except IndexError as IE:
                     print(
-                        f"\n\nOcorreu um erro de Index na imagem: {path_imagem}, porém continuando para a proxima imagem"
+                        f"\n\nIndex Error in {path_image}"
                     )
                     continue
                 except Exception as error:
                     print(
-                        f"\n\nOcorreu um erro na imagem: {path_imagem}, porém continuando para a proxima imagem"
+                        f"\n\nImage Error {path_image}"
                     )
                     continue
 
@@ -254,36 +255,33 @@ class Car:
         Return:
             DataFrame.csv with the labeled plate of each car (image)
         """
-        self.path = path
-        self.folder_name = folder_name
-        df_lista_yolo = []
-
         full_path = self.__create_new_folder(path, folder_name)
-        custom_config = r'--psm 6'
 
-        for dir, subarch, archives in os.walk(path):
-            for path_imagem in archives:
+        # Define the configuration for pytesseract
+        custom_config = r'--psm 6 tessedit_char_blacklist=|!\n]['
+
+        df_lista_yolo = []
+        for dirpath, dirnames, filenames in os.walk(path):
+            for filename in filenames:
+                # Read the image file
                 try:
-                    img = cv2.imread(path + "/" + str(path_imagem))
+                    img = cv2.imread(os.path.join(dirpath, filename))
                     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-                    text = pytesseract.image_to_string(img, config = custom_config)
-                    df_lista_yolo.append((path_imagem, text.upper()))
 
-                except IndexError as IE:
-                    print(
-                        f"\n\nOcorreu um erro de Index na imagem: {path_imagem}, porém continuando para a proxima imagem"
-                    )
-                    continue
-                except Exception as error:
-                    print(
-                        f"\n\nOcorreu um erro na imagem: {path_imagem}, porém continuando para a proxima imagem"
-                    )
-                    continue
+                    # Use pytesseract to extract text from the image
+                    text = pytesseract.image_to_string(img, config=custom_config)
+                    plate = re.sub(r'[^A-Za-z0-9]+', '', text)
+                    df_lista_yolo.append((filename, plate.upper()))
 
-        df_aux = pd.DataFrame(df_lista_yolo)
-        df_aux.rename(columns={0: "Image", 1: "Plate"}, inplace=True)
-        df = df_aux.sort_values("Image").to_csv(
-            full_path + "/" + "pytesseract_results.csv", index=False
+                except cv2.error as e:
+                    print(f"Error reading image file {filename}: {e}")
+                except pytesseract.TesseractError as e:
+                    print(f"Error processing image file {filename}: {e}")
+
+        # Convert the list to a pandas DataFrame and save to a CSV file
+        df = pd.DataFrame(df_lista_yolo, columns=["Image", "Plate"])
+        df = df.sort_values("Image").to_csv(
+            os.path.join(full_path, "pytesseract_results.csv"), index=False
         )
 
         return df
@@ -336,9 +334,9 @@ class Car:
 """
 To run the class above, do:
 
-Car().OpenCVeasy(path = "/content/samples", folder_name = "opencv_detection") 
-Car().YOLOeasy(path = "/content/samples", folder_name = "yolo_easy_detection")
-Car().YOLOpytesseract(path = "/content/samples", folder_name = "pytesseract_detection")  
-Car().YOLOkeras(path = "/content/samples", folder_name = "keras_detection") 
+Car().OpenCVeasy(path = "samples/", folder_name = "results") 
+Car().YOLOeasy(path = "samples/", folder_name = "results")
+Car().YOLOpytesseract(path = "samples/", folder_name = "results")  
+Car().YOLOkeras(path = "samples/", folder_name = "results") 
 """
 
