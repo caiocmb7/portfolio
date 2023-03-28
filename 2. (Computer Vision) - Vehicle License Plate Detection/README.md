@@ -32,6 +32,7 @@ The code was built in Jupyter Lab, so we need to use it for some things in the c
 
 This created class contains two proposed solutions:
 
+```
 1. More classical approach, using edge detection (OpenCV) to identify the car plates, and then using EasyOCR for image to text transcription.
 
     To use this solution, just run the class in [plate_detection.py] with the following command:
@@ -44,7 +45,8 @@ This created class contains two proposed solutions:
 
         * path = location where the dataset was placed
         * folder_name = name of the folder that will be created and where the script results will be allocated
-        * show_steps = good method for when using manual detection, where it can show step-by-step what is happening with the image to be transcribed.
+        * show_steps = good method for when using manual detection, where it can show step-by-step what is happening with the image to be transcribed. (opcional)
+        * save_fig = save images with bounding boxes around detected license plates. (opcional)
 
 2. The second solution uses YOLOv5, training the model and using YOLOv5's own resource to crop the images where the respective car plates are located. After that, there are three options for extracting the plate characters, using EasyOCR, Pytesseract or KerasOCR.
 
@@ -53,14 +55,17 @@ This created class contains two proposed solutions:
     *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this.
 
     -> Car().YOLOeasy(path = "samples/", folder_name = "yolo_easy_detection")
+
     -> Car().YOLOpytesseract(path = "samples/", folder_name = "pytesseract_detection")  
+
     -> Car().YOLOkeras(path = "samples/", folder_name = "keras_detection") 
 
     where
 
         * path = location where the dataset was placed (in this case, it is already the result returned from the yolov5 crop, not the original dataset)
         * folder_name = name of the folder that will be created and where the script results will be allocated.
-
+        * show_steps = good method for when using manual detection, where it can show step-by-step what is happening with the image to be transcribed. (opcional)
+```
 
 ### Next steps
 
