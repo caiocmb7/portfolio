@@ -26,7 +26,24 @@ Therefore, the project would only be composed of the set -> edge detection + Eas
 
 However, only the new car plate cropping approach was not visually sufficient for the effectiveness and excellence of the supposed metrics and values. Therefore, two more OCR techniques were added, which were pytesseract and KerasOCR, both of which proved to be much better than EasyOCR. Between the two, KerasOCR is a much more meticulous algorithm, where it can analyze tiny details, which can be good from one perspective and bad from another, as it detects characters that are not theoretically relevant to the analysis of the plate, as well as understanding the spacing between words of the car plate better, causing the image-to-text transcription to go through a manipulation to be saved in CSV. On the other hand, Pytesseract, despite not being so meticulous in its detections, was the model that best fit and had the most accurate output for this project, in addition to being faster in response.
 
+Finally, for the purpose of comparison between the techniques used, we conducted tests with 20 samples to evaluate the OCRs using WER (Word Error Rate) and CER (Character Error Rate).
+
 ### How to use the code:
+
+#### Virtual Environment
+
+```
+# Windows
+
+# Create conda environment and activate
+conda create --name ocrproject python=3.7
+conda activate ocrproject
+
+# Install Libraries
+pip install -r requirements.txt
+```
+
+#### Implementation
 
 The code was built in Jupyter Lab, so we need to use it for some things in the code to work, such as creating directories, pytesseract configuration, etc.
 
