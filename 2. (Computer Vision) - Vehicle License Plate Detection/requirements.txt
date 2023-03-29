@@ -1,0 +1,16 @@
+opencv-python==4.5.5.64
+jupyterlab
+tensorflow
+sklearn
+scikit-learn
+easyocr 
+imutils 
+keras-ocr 
+matplotlib 
+numpy 
+pandas 
+pytesseract 
+nb_black 
+scikit-image 
+pybind11
+fastwer
