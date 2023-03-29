@@ -52,7 +52,7 @@ This created class contains two proposed solutions:
 ```
 1. More classical approach, using edge detection (OpenCV) to identify the car plates, and then using EasyOCR for image to text transcription.
 
-    To use this solution, just run the class in [plate_detection.py] with the following command:
+    To use this solution, run this command below:
 
     *Remember that in these methods, you need the dataset with the original images, from the kaggle dataset provided.
 
@@ -67,9 +67,9 @@ This created class contains two proposed solutions:
 
 2. The second solution uses YOLOv5, training the model and using YOLOv5's own resource to crop the images where the respective car plates are located. After that, there are three options for extracting the plate characters, using EasyOCR, Pytesseract or KerasOCR.
 
-    To use this solution, just run the class in [plate_detection.py] with the following commands:
+    To use this solution, you can use 3 types of OCR algorithms.
 
-    *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this.
+    *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this (yolov5 implementation). The output of this file will be the cropped images that will be used for these codes below:
 
     -> PlateRecognition().YOLOeasy(path = "cropped_samples/", folder_name = "results")
 
@@ -88,7 +88,7 @@ This created class contains two proposed solutions:
 
 1. Perform pre-processing for image enhancement
 2. Check for the existence of a better configuration for pytesseract (psm, oem, etc. parameters)
-3. Add metrics to evaluate OCR performance.
+3. Compare OCR results with Machine Learning implementation
 
 
 
