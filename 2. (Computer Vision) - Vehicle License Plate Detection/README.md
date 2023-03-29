@@ -39,7 +39,7 @@ This created class contains two proposed solutions:
 
     *Remember that in these methods, you need the dataset with the original images, from the kaggle dataset provided.
 
-    -> Car().OpenCVeasy(path = "samples/", folder_name = "results", show_steps = False)
+    -> Car().OpenCVeasy(path = "original_samples/", folder_name = "results", show_steps = False)
 
     where
 
@@ -54,11 +54,11 @@ This created class contains two proposed solutions:
 
     *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this.
 
-    -> Car().YOLOeasy(path = "samples/", folder_name = "results")
+    -> Car().YOLOeasy(path = "cropped_samples/", folder_name = "results")
 
-    -> Car().YOLOpytesseract(path = "samples/", folder_name = "results")  
+    -> Car().YOLOpytesseract(path = "cropped_samples/", folder_name = "results")  
 
-    -> Car().YOLOkeras(path = "samples/", folder_name = "results") 
+    -> Car().YOLOkeras(path = "cropped_samples/", folder_name = "results") 
 
     where
 
