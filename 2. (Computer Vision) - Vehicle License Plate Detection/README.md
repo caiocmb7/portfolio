@@ -84,11 +84,15 @@ This created class contains two proposed solutions:
         * show_steps = good method for when using manual detection, where it can show step-by-step what is happening with the image to be transcribed. (opcional)
 ```
 
-### Next steps
+### Results
 
-1. Perform pre-processing for image enhancement
-2. Check for the existence of a better configuration for pytesseract (psm, oem, etc. parameters)
-3. Compare OCR results with Machine Learning implementation
+YOLOv5 + Pytesseract produced the best results for recognition. To reach this conclusion, the project was based on CER and WER metrics, mainly CER for this purpose. To improve these metrics, I tried different approaches and different types of preprocessing, like noise reduction, adaptive binarization, increased contrast, improved resolution of the images, and filters. The best result for these preprocessing steps was using only redimensionalization and contrast.
+
+### Next steps
+For comparison criterias, we can try others techniques or approaches like:
+
+1. Compare OCR results with Machine Learning implementation
+2. Use another OCR algorithm like Google Cloud Vision
 
 
 
