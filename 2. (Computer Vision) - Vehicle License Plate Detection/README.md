@@ -71,6 +71,8 @@ This created class contains two proposed solutions:
 
     *Remember that in these methods, you need the dataset with the properly cropped images, using helper/[yolo_cropped_images.ipynb] for this (yolov5 implementation). The output of this file will be the cropped images that will be used for these codes below:
 
+    The cropped samples will be used in our preprocessing method which will be created a new folder called 'preprocessed_samples' with the new preprocessed images from that.
+
     -> PlateRecognition().YOLOeasy(path = "cropped_samples/", folder_name = "results")
 
     -> PlateRecognition().YOLOpytesseract(path = "cropped_samples/", folder_name = "results")  
