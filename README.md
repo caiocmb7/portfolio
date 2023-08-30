@@ -1,12 +1,10 @@
 # Portfolio
 
-## Data Science, AI and Data Engineering Projects by Caio Barros.
+## Developed Projects:
 
-### Developed Projects:
+### 1. Qatar 2022 World Cup November 2022
 
-#### 1. **Qatar 2022 World Cup November 2022**
-
-_Creation of the Dataset for Analysis and Data Visualization to generate insights and information about the World Cup event._
+> Creation of the Dataset for Analysis and Data Visualization to generate insights and information about the World Cup event.
 
 - Data cleaning through Webscraping and Feature Engineering to enhance performance and analyze data for generating statistics and general information about the World Cup.
 
@@ -16,17 +14,17 @@ _Creation of the Dataset for Analysis and Data Visualization to generate insight
 
 - Creation of Machine Learning models for predicting World Cup matches.
 
-#### 2. **Automatic Car Plate Detection**
+### 2. Automatic Car Plate Detection
 
-_Automatic recognition of car plates using OCR and YOLO algorithms._
+> Automatic recognition of car plates using OCR and YOLO algorithms.
 
 - Implementation of OCR algorithms, comparison, and performance analysis using CER and WER metrics.
 
 - Utilization of YOLOv5 for automatic plate cropping based on created labels.
 
-#### 3. **Rentals Regression and Classification**
+### 3. Rentals Regression and Classification
 
-_Creation of Machine Learning models to study predictions and classifications in a region of Brazil._
+> Creation of Machine Learning models to study predictions and classifications in a region of Brazil.
 
 - Creation of the property dataset using Webscraping.
 
