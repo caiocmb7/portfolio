@@ -10,7 +10,7 @@
 
 - Exploratory Data Analysis (EDA) via SweetViz and Pandas.
 
-- Data clustering using K-Means and DBSCAN.
+- Data clustering using K-Means and DBSCAN to create player profiles and to recognize patterns based on the dataset.
 
 - Creation of Machine Learning models for predicting World Cup matches.
 
