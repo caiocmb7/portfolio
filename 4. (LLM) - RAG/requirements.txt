@@ -1,0 +1,15 @@
+langchain-text-splitters
+unstructured
+singlestoredb
+langchain
+openai
+python-dotenv
+nb-black==1.0.5
+langchain_community
+pdfminer
+pdfminer.six
+pillow-heif
+pdf2image
+unstructured_inference
+pytesseract
+unstructured_pytesseract
