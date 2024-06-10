@@ -13,3 +13,4 @@ pdf2image
 unstructured_inference
 pytesseract
 unstructured_pytesseract
+chromadb
