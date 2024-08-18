@@ -7,8 +7,8 @@ from crewai import Agent
 from textwrap import dedent
 from langchain_groq import ChatGroq
 
-# GROQ_MODEL = "llama-3.1-8b-instant"
-GROQ_MODEL = "llama-3.1-8b-instant"
+# GROQ_MODEL = "llama-3.1-8b-instant" "gemma2-9b-it" "llama-3.1-70b-versatile"
+GROQ_MODEL = "gemma2-9b-it"
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY)
 
@@ -16,11 +16,12 @@ llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY)
 class NutritionistAgents:
     def profile_analysis_agent(self):
         return Agent(
-            role="Profile Analysis Specialist",
+            role="Nutritionist Specialist",
             goal=dedent(
                 """
-                With the client profile, your task is to analyze the client's profile, including health conditions, 
-                dietary preferences, lifestyle and other important features to understand their unique nutritional needs. Furthermore, provide a prediction on the metabolic rate value based on the data, 
+                With the client profile, your task is to analyze the client's profile, including health conditions, dietary overview and dietary needs, summary of health conditions, 
+                daily calorie consumption, food preferences and water intake, nutritional recommendations, lifestyle and other important features to understand their unique nutritional needs, 
+                goals and benefits. Furthermore, accurately calculate their Basal Metabolic Rate (BMR) and daily calorie consumption provide a prediction on the metabolic rate value based on the data, 
                 to understand the base calorie consumption, water consumption and the combination of carbohydrates, proteins, and fats required per day."""
             ),
             backstory=dedent(
@@ -33,6 +34,7 @@ class NutritionistAgents:
             ),
             llm=llm,
             verbose=True,
+            allow_delegation=False,
         )
 
     def diet_recommendation_agent(self):
@@ -42,10 +44,12 @@ class NutritionistAgents:
             backstory=dedent(
                 """
                 Use the client's profile analysis to create a balanced meal plan, considering their dietary preferences, health conditions, 
-                goals and other important variable features from the profile. Focus on Brazilian foods and based on the current diet of the client."""
+                goals and other important variable features from the profile. Focus on Brazilian foods and use the current diet of the client to
+                know the food preferences, but not only it, you can diversify it. Moreover, ensure to implement salads in lunch and dinner time to increase saciety."""
             ),
             llm=llm,
             verbose=True,
+            allow_delegation=False
         )
 
     def educational_support_agent(self):
@@ -55,6 +59,7 @@ class NutritionistAgents:
             backstory="This agent focuses on educating the client about nutrition, providing tips for grocery shopping, healthy cooking, and making informed dietary choices.",
             llm=llm,
             verbose=True,
+            allow_delegation=False
         )
 
     def nutritionist_coordinator_agent(self):
@@ -63,9 +68,10 @@ class NutritionistAgents:
             goal="Compile all gathered information into a concise, informative briefing document",
             backstory=dedent(
                 """
-                Synthesizes entire gathered information, creating a comprehensive nutrition and lifestyle plan in a clear and actionable format. 
+                Consolidate the entire gathered information, creating a comprehensive nutrition and lifestyle plan in a clear and actionable format. 
                 The goal is to ensure the client receives practical, easy-to-follow advice that aligns with their goals in a organized document."""
             ),
             llm=llm,
             verbose=True,
+            allow_delegation=False
         )

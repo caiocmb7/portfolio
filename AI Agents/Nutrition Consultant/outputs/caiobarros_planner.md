@@ -1,100 +1,84 @@
-**Nutrition Plan for Caio**
+##  Client Nutritional Analysis & Action Plan
 
-**Overview**
+This document outlines a personalized nutrition and lifestyle plan designed to support the client's goals of weight loss, reducing body fat percentage, and specifically targeting abdominal fat.
 
-Caio is a 26-year-old male who stands at 1.80m and weighs 90kgs. His primary goal is to reduce his fat percentage and abdominal fat. Caio visits the gym five times a week and has no reported food allergies or sensitivities. A balanced meal plan with portion control will be beneficial for him to achieve his weight loss goal.
+### Profile Analysis Summary
 
-**Dietary Needs**
+* **Age:** 26
+* **Height:** 1.80m
+* **Weight:** 90kg
+* **Body Fat Percentage:** 26%
+* **Activity Level:**  High-intensity lifting 5 days per week.
 
-*   **Caloric Intake**: 2000-2200 calories per day
-*   **Macronutrient Distribution**: 1.6-2 grams of protein per kilogram of body weight, 2-3 grams of complex carbohydrates per kilogram of body weight, and 0.5-1 gram of healthy fats per kilogram of body weight
-*   **Hydration**: Encourage the client to drink at least 8-10 glasses of water per day
+**Goals:** 
+* Weight loss
+* Reduce body fat percentage, especially abdominal fat.
 
-**Meal Plan**
+### Dietary Overview and Needs
 
-*   **Weekly Meal Plan (3 options for each meal)**
-    *   **Breakfast** (250 calories)
-        *   Option 1: Overnight oats with banana and almond milk
-        *   Option 2: Scrambled eggs with whole wheat toast and avocado
-        *   Option 3: Greek yogurt with berries and granola
-    *   **Lunch** (400-450 calories)
-        *   Option 1: Grilled chicken breast with brown rice and steamed vegetables
-        *   Option 2: Turkey and avocado wrap with mixed greens
-        *   Option 3: Quinoa salad with grilled chicken, mixed vegetables, and citrus vinaigrette
-    *   **Afternoon Snacks** (100-150 calories)
-        *   Apple slices with almond butter
-        *   Greek yogurt with berries
-        *   Hard-boiled egg
-    *   **Dinner** (500-550 calories)
-        *   Option 1: Grilled salmon with roasted sweet potatoes and steamed broccoli
-        *   Option 2: Beef and vegetable stir-fry with brown rice
-        *   Option 3: Baked chicken thighs with roasted sweet potatoes and steamed green beans
-    *   **Supper** (150-200 calories)
-        *   Greek yogurt with berries
-        *   Cottage cheese with sliced peaches
-        *   Hard-boiled egg
+* **Caloric Needs:**  Estimated BMR: 1800-1900 calories per day.
+    * Target calorie intake for weight loss: 1300-1400 calories per day (adjust based on progress).
+* **Macronutrient Distribution:**
+    * **Protein:** 144-198 grams per day (1.6-2.2 grams per kg of bodyweight)
+    * **Carbohydrates:** 260-350 grams per day (40-50% of total calories)
+    * **Fats:** 146-218 grams per day (20-30% of total calories)
 
-**Recipes and Cooking Tips**
+* **Hydration:**  2-3 liters of water per day, especially during and after workouts.
 
-*   **Grilled Chicken Breast with Brown Rice and Steamed Vegetables**
-    *   Marinate chicken breast in olive oil, salt, and pepper
-    *   Grill chicken breast for 5-6 minutes per side
-    *   Cook brown rice according to package instructions
-    *   Steam vegetables for 3-4 minutes
-*   **Turkey and Avocado Wrap with Mixed Greens**
-    *   Slice turkey breast and avocado
-    *   Add mixed greens, tomato, and cucumber to the wrap
-    *   Drizzle with olive oil and lemon juice
-*   **Baked Chicken Thighs with Roasted Sweet Potatoes and Steamed Green Beans**
-    *   Marinate chicken thighs in olive oil, salt, and pepper
-    *   Bake chicken thighs for 20-25 minutes
-    *   Roast sweet potatoes for 20-25 minutes
-    *   Steam green beans for 3-4 minutes
+**Dietary Preferences and Restrictions:** No reported preferences or restrictions.
 
-**Dietary Recommendations**
+### Health Conditions and Lifestyle
 
-*   **Eat 5-6 meals per day, spaced out every 2-3 hours**
-*   **Drink at least 8-10 glasses of water per day**
-*   **Incorporate physical activity, such as walking or jogging, for at least 30 minutes per day**
-*   **Monitor progress and adjust the meal plan as needed**
+* **Health Conditions:** None reported.
+* **Food Allergies:** None reported.
+* **Supplements:** Caffeine (200mg) and whey protein.
+* **Sleep Quality:** 6-8 hours per night.
+* **Stress Management:**  Median level.
 
-**Comprehensive Document List for Caio**
+### Nutritional Recommendations
 
-**I. Educational Resources**
+* **Dietary Diversification:** Incorporate a wider variety of fruits, vegetables, whole grains, lean proteins, and healthy fats into your diet. Aim for at least 5 servings of fruits and vegetables daily.
+* **Meal Timing:** Distribute calorie intake evenly throughout the day (3 meals + 2 snacks) to maintain stable energy levels and promote satiety.
+* **Pre-Workout Fuel:** Optimize your pre-workout snack for sustained energy. Consider options like sweet potato, oatmeal with berries, or a banana with whey protein.
+* **Post-Workout Recovery:** Prioritize protein intake within 30-60 minutes after workouts to support muscle recovery and growth.
+* **Mindful Eating:** Pay attention to hunger and fullness cues and avoid distractions while eating.
+* **Sleep Quality:** Aim for 7-9 hours of quality sleep per night to support overall health, hormone regulation, and recovery.
+* **Stress Management:** Explore stress-reducing techniques like meditation, yoga, or spending time in nature.
 
-1.  **American Heart Association (AHA) Nutrition Guidelines**: A comprehensive guide to healthy eating, including the DASH diet and other evidence-based recommendations.
-2.  **Academy of Nutrition and Dietetics (AND) EatRight**: A trusted resource for nutrition information, including articles, videos, and recipes.
-3.  **National Institutes of Health (NIH) Nutrition Bibliography**: A database of peer-reviewed articles and research on various nutrition topics.
-4.  **Harvard School of Public Health Nutrition Source**: A website offering nutrition information, including articles, videos, and recipes.
+### Daily Meal Plan (Monday Example)
 
-**II. Nutritional Guidelines**
+*(Adjust portion sizes based on individual needs and hunger levels)*
 
-1.  **Daily Caloric Intake**: Based on Caio's age, sex, weight, and activity level, we recommend a daily caloric intake of 2500 calories.
-2.  **Macronutrient Breakdown**: Aim for a balanced diet consisting of:
-    *   Carbohydrates: 45-65% of daily calories
-    *   Protein: 15-20% of daily calories
-    *   Fat: 20-35% of daily calories
-3.  **Hydration**: Drink at least 8-10 glasses of water per day
-4.  **Fiber Intake**: Aim for 25-30 grams of fiber per day from sources like fruits, vegetables, whole grains, and legumes
+* **Breakfast (300 calories):**
+    * Option 1: 2 slices whole wheat toast with 2 scrambled eggs and 1/2 cup chopped tomatoes and cucumbers.
+    * Option 2: 1 cup Greek yogurt with 1/4 cup granola, 1/2 cup berries, and chia seeds.
+    * Option 3: 1 banana smoothie with 1 scoop whey protein, 1/4 cup spinach, and 1/2 cup almond milk.
+* **Lunch (400 calories):**
+    * Option 1:  100g brown rice, 100g grilled chicken breast, 100g black beans, and a large mixed green salad with olive oil and lemon vinaigrette.
+    * Option 2: 100g quinoa, 100g baked salmon, 100g roasted vegetables (carrot, broccoli, bell pepper), and a small side salad.
+    * Option 3: 1 whole wheat wrap filled with 100g shredded chicken, 1/2 avocado, lettuce, tomato, and light mayonnaise.
+* **Pre-Workout Snack (150 calories):**
+    * Option 1: 1 medium apple with 2 tablespoons peanut butter.
+    * Option 2: 1 banana with 1 scoop whey protein.
+    * Option 3: 1 small cup of oatmeal with 1/4 cup berries.
+* **Dinner (450 calories):**
+    * Option 1: 100g sweet potato puree, 100g grilled chicken breast, 100g green beans, and a side salad.
+    * Option 2: 100g brown rice, 100g lentil stew, and a large mixed green salad with olive oil and lemon vinaigrette.
+    * Option 3: 1 whole wheat pasta with 100g tomato sauce, 100g lean ground beef, and a side salad.
+* **Supper (150 calories):**
+    * Option 1: 1 cup low-fat yogurt with 1/4 cup chopped fruit.
+    * Option 2: 1/2 cup cottage cheese with cinnamon powder.
+    * Option 3: 1 cup chamomile tea with 1 slice whole wheat toast.
 
-**III. Tips for Grocery Shopping**
+ **Tuesday - Sunday:**  Follow the same structure as Monday, but feel free to switch up the meal options to ensure variety and prevent boredom.
 
-1.  **Plan Your Meals**: Before shopping, plan your meals for the week to ensure you buy only what you need.
-2.  **Shop the Perimeter**: Focus on buying fresh produce, meats, and dairy products from the store's perimeter.
-3.  **Avoid Processed Foods**: Limit or avoid foods high in added sugars, saturated fats, and sodium.
-4.  **Buy in Bulk**: Purchase whole grains, nuts, and seeds in bulk to save money and reduce waste
-5.  **Read Labels**: Pay attention to serving sizes, ingredient lists, and nutrition facts
 
-**IV. Healthy Cooking Techniques**
+### Educational Resources and Guidance on Healthy Eating Habits
 
-1.  **Grilling**: A great way to reduce fat content in meals while preserving nutrients.
-2.  **Roasting**: A moist-heat cooking method that helps retain nutrients in vegetables
-3.  **Steaming**: A low-calorie cooking method that helps preserve nutrients in vegetables
-4.  **Stir-Frying**: A quick and easy cooking method that helps reduce fat content in meals
-5.  **Poaching**: A low-calorie cooking method that helps preserve nutrients in proteins
+For further information and support, explore these resources:
+* **Dietary Guidelines for Americans:** [https://www.dietaryguidelines.gov/](https://www.dietaryguidelines.gov/)
+* **MyPlate:** [https://www.myplate.gov/](https://www.myplate.gov/)
+* **The Academy of Nutrition and Dietetics:** [https://www.eatright.org/](https://www.eatright.org/)
 
-**V. Additional Resources**
 
-1.  **MyPlate**: A tool to help Caio plan and track their daily food intake
-2.  **Food Diary**: Keep a record of Caio's food intake to monitor progress and identify areas for improvement
-3.  **Nutrition Apps**: Explore apps like MyFitnessPal or Lose It! to track daily nutrition and exercise
+**Remember:** Consistency, gradual changes, and personalized adjustments are key to achieving your health goals.
