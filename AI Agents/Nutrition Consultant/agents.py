@@ -7,7 +7,7 @@ from crewai import Agent
 from textwrap import dedent
 from langchain_groq import ChatGroq
 
-# GROQ_MODEL = "llama-3.1-8b-instant" "gemma2-9b-it" "llama-3.1-70b-versatile"
+# GROQ_MODEL = "llama-3.1-8b-instant" "gemma2-9b-it" "llama-3.1-70b-versatile" "llama3-70b-8192"
 GROQ_MODEL = "gemma2-9b-it"
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY)
@@ -30,7 +30,10 @@ class NutritionistAgents:
                 taking into account your age, height, gender, and main health goals, to develop a personalized nutrition plan. 
                 They will consider your current diet, frequency of eating out or processed foods, supplement use, physical activity level, and feelings after eating. 
                 They will also address your water intake, sleep quality, dietary preferences or restrictions, caffeine or alcohol consumption, stress levels, and any cultural or religious dietary practices. 
-                This comprehensive approach ensures that the plan is tailored to your needs, helping you achieve your health goals effectively."""
+                This comprehensive approach ensures that the plan is tailored to your needs, helping you achieve your health goals effectively.
+                To accurately calculate Basal Metabolic Rate (BMR) and daily caloric expenditure, it is essential to gather and analyze key client data, including age, gender, height, weight, 
+                and body composition, such as muscle mass and fat percentage. The calculation should incorporate established formulas like Mifflin-St Jeor or Harris-Benedict, 
+                adjusted for individual factors such as metabolic health, physical activity level, and lifestyle habits."""
             ),
             llm=llm,
             verbose=True,
@@ -40,12 +43,17 @@ class NutritionistAgents:
     def diet_recommendation_agent(self):
         return Agent(
             role="Diet Recommendation Specialist",
-            goal="Generate a personalized and evidence-based nutrition plan tailored to the client's profile and health goals.",
+            goal="Generate a weekly personalized and evidence-based nutrition plan tailored to the client's profile, health goals, and daily schedule.",
             backstory=dedent(
                 """
                 Use the client's profile analysis to create a balanced meal plan, considering their dietary preferences, health conditions, 
-                goals and other important variable features from the profile. Focus on Brazilian foods and use the current diet of the client to
-                know the food preferences, but not only it, you can diversify it. Moreover, ensure to implement salads in lunch and dinner time to increase saciety."""
+                goals, and other important variables from the profile. Focus on Brazilian foods and use the client's current diet as a basis 
+                to understand their food preferences and the menu of options. Additionally, include salad (vegetable and/or green leaves) in the lunch 
+                and dinner to increase satiety and fibers. The meal plan should be aligned with the client's established schedule, including wake-up time, 
+                sleep time, and especially their workout schedule. Pre-workout meals should be planned to enhance performance and energy levels.
+                
+                Always use standard Brazilian units of measurement for weight and volume, such as grams (g) for weight and liters (L) for volume. 
+                Avoid using cups, teaspoons, or tablespoons. For example, specify quantities in grams for solid foods and in liters or milliliters for liquids."""
             ),
             llm=llm,
             verbose=True,
@@ -65,11 +73,11 @@ class NutritionistAgents:
     def nutritionist_coordinator_agent(self):
         return Agent(
             role="Nutritionist Coordinator",
-            goal="Compile all gathered information into a concise, informative briefing document",
+            goal="Compile all gathered information into a concise and informative document",
             backstory=dedent(
                 """
                 Consolidate the entire gathered information, creating a comprehensive nutrition and lifestyle plan in a clear and actionable format. 
-                The goal is to ensure the client receives practical, easy-to-follow advice that aligns with their goals in a organized document."""
+                The goal is to return a well-crafted document ensuring the client receives practical, easy-to-follow advice that aligns with their goals."""
             ),
             llm=llm,
             verbose=True,

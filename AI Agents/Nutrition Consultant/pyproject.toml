@@ -15,6 +15,7 @@ python-dotenv = "^1.0.1"
 langchain-groq = "^0.1.9"
 jupyterlab = "^4.2.4"
 black = "^24.8.0"
+streamlit = "^1.37.1"
 
 
 [build-system]
