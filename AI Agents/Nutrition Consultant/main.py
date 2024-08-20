@@ -6,13 +6,13 @@ from inputs import inputs
 
 import streamlit as st
 
-st.set_page_config(layout="centered", page_title="Nutritionist AI Agent", page_icon="🧠")
+st.set_page_config(layout="wide", page_title="Nutritionist AI Agent", page_icon="🧠")
 st.title("Nutritionist AI Agent")
 st.markdown("--------")
 
 def main():
     # Streamlit form for user profile input
-    st.title("Nutritional Analysis Form")
+    st.title("Profile Analysis Form")
 
     with st.form(key="user_profile_form"):
         age = st.text_input("Age", value="26")
