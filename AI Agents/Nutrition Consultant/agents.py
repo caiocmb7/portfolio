@@ -8,9 +8,9 @@ from textwrap import dedent
 from langchain_groq import ChatGroq
 
 # GROQ_MODEL = "llama-3.1-8b-instant" "gemma2-9b-it" "llama-3.1-70b-versatile" "llama3-70b-8192"
-GROQ_MODEL = "gemma2-9b-it"
+GROQ_MODEL = "llama-3.1-70b-versatile"
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
-llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY)
+llm = ChatGroq(model=GROQ_MODEL, api_key=GROQ_API_KEY, temperature=0)
 
 
 class NutritionistAgents:
@@ -73,11 +73,11 @@ class NutritionistAgents:
     def nutritionist_coordinator_agent(self):
         return Agent(
             role="Nutritionist Coordinator",
-            goal="Compile all gathered information into a concise and informative document",
+            goal="Compile all gathered information into a concise, informative and ordered document",
             backstory=dedent(
                 """
                 Consolidate the entire gathered information, creating a comprehensive nutrition and lifestyle plan in a clear and actionable format. 
-                The goal is to return a well-crafted document ensuring the client receives practical, easy-to-follow advice that aligns with their goals."""
+                The goal is to return a well-crafted and ordered document ensuring the client receives practical, easy-to-follow advice that aligns with their goals."""
             ),
             llm=llm,
             verbose=True,
