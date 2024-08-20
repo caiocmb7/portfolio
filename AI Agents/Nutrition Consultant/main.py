@@ -6,7 +6,7 @@ from inputs import inputs
 
 import streamlit as st
 
-st.set_page_config(layout="wide", page_title="Nutritionist AI Agent", page_icon="🧠")
+st.set_page_config(layout="centered", page_title="Nutritionist AI Agent", page_icon="🧠")
 st.title("Nutritionist AI Agent")
 st.markdown("--------")
 
@@ -15,11 +15,11 @@ def main():
     st.title("Profile Analysis Form")
 
     with st.form(key="user_profile_form"):
-        age = st.text_input("Age", value="26")
-        height = st.text_input("Height (e.g., 1.80m)", value="1.80m")
+        age = st.text_input("Age", value="20")
+        height = st.text_input("Height (e.g., 1.80m)", value="1.77m")
         gender = st.selectbox("Gender", options=["Male", "Female", "Other"])
-        weight = st.text_input("Weight (e.g., 90kg)", value="90kg")
-        actual_fat_percentage = st.text_input("Actual Fat Percentage", value="26%")
+        weight = st.text_input("Weight (e.g., 90kg)", value="82kg")
+        actual_fat_percentage = st.text_input("Actual Fat Percentage", value="20%")
         main_health_goals = st.text_area("Main Health Goals", value="Weight loss, reduce fat percentage, and focus on reducing abdominal fat, especially on the flanks")
         medical_conditions_or_food_allergies = st.text_area("Medical Conditions or Food Allergies", value="No, I don't")
 
@@ -47,11 +47,9 @@ def main():
         stress_levels_and_management = st.text_area("Stress Levels and Management", value="Median.")
         cultural_or_religious_dietary_practices = st.text_area("Cultural or Religious Dietary Practices", value="No, I don't have.")
 
-        # Submit button
         submit_button = st.form_submit_button(label="Submit")
 
     if submit_button:
-        # Create the user profile dictionary
         user_profile = {
             "age": age,
             "height": height,
@@ -73,10 +71,9 @@ def main():
             "cultural_or_religious_dietary_practices": cultural_or_religious_dietary_practices,
         }
 
-        # Replace the hardcoded inputs with the form inputs
         user_inputs = {
             "user_profile": user_profile,
-            "foods": inputs["foods"]  # Assuming foods is also a part of the inputs
+            "foods": inputs["foods"]
         }
 
 

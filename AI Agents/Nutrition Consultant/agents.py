@@ -77,7 +77,9 @@ class NutritionistAgents:
             backstory=dedent(
                 """
                 Consolidate the entire gathered information, creating a comprehensive nutrition and lifestyle plan in a clear and actionable format. 
-                The goal is to return a well-crafted and ordered document ensuring the client receives practical, easy-to-follow advice that aligns with their goals."""
+                The goal is to return a well-crafted and ordered document ensuring the client receives practical, easy-to-follow advice that aligns with their goals.
+                
+                Note: the client can't see the provided context gave to you, so your task is to consolidate it and return it back to the user."""
             ),
             llm=llm,
             verbose=True,
